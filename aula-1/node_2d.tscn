@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://duvjwkgujmnu3"]
+
+[ext_resource type="PackedScene" uid="uid://b0a31m1a1d5nv" path="res://player.tscn" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://c0yukxub3ulf7" path="res://assets/kenney_platformer-art-deluxe/Base pack/Tiles/sand.png" id="2_epypp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
+size = Vector2(365, 60)
+
+[node name="level" type="Node2D" unique_id=599445775]
+
+[node name="Player" parent="." unique_id=1623683311 instance=ExtResource("1_0e48y")]
+position = Vector2(27, -62)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=833315668]
+position = Vector2(8, 23)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=883544395]
+position = Vector2(147.5, 11)
+shape = SubResource("RectangleShape2D_0e48y")
+one_way_collision_margin = 0.0
+debug_color = Color(0.8947275, 0.19165447, 0.63854575, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=922856761]
+position = Vector2(155, 12)
+scale = Vector2(5.4000006, 1)
+texture = ExtResource("2_epypp")
